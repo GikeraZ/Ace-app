@@ -1,0 +1,608 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f5f5f5;
+}
+
+.App {
+    min-height: 100vh;
+}
+
+/* Login Styles */
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.login-form {
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    width: 100%;
+    max-width: 400px;
+}
+
+.login-form h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: #333;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #555;
+    font-weight: bold;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #667eea;
+    box-shadow: 0 0 0 2px rgba(102, 126, 234, 0.1);
+}
+
+button {
+    width: 100%;
+    padding: 0.75rem;
+    background: #667eea;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+
+button:hover:not(:disabled) {
+    background: #5a6fd8;
+}
+
+button:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+}
+
+.error {
+    color: #e74c3c;
+    margin-top: 1rem;
+    padding: 0.5rem;
+    background: #ffeaea;
+    border-radius: 4px;
+    border: 1px solid #e74c3c;
+}
+
+.success {
+    color: #27ae60;
+    background: #e8f8e8;
+    border: 1px solid #27ae60;
+}
+
+/* Switch Mode Styles for Login/Signup */
+.switch-mode {
+    margin-top: 1rem;
+    text-align: center;
+}
+
+.switch-btn {
+    background: none;
+    border: none;
+    color: #667eea;
+    cursor: pointer;
+    text-decoration: underline;
+    font-size: 1rem;
+    padding: 0;
+    margin: 0 0.25rem;
+}
+
+.switch-btn:hover {
+    color: #5a6fd8;
+}
+
+/* Dashboard Styles */
+.dashboard-header {
+    background: white;
+    padding: 1rem 2rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.logout-btn {
+    background: #e74c3c;
+    padding: 0.5rem 1rem;
+    width: auto;
+}
+
+.logout-btn:hover {
+    background: #c0392b;
+}
+
+/* Business Selection */
+.business-selection {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.business-selection h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #333;
+}
+
+.business-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.business-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    cursor: pointer;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.business-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+.business-card h3 {
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+/* Form Styles */
+.form-container {
+    padding: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.back-btn {
+    background: #95a5a6;
+    margin-bottom: 1rem;
+    width: auto;
+}
+
+.back-btn:hover {
+    background: #7f8c8d;
+}
+
+.business-form {
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.form-wrapper {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Admin Dashboard */
+.dashboard-content {
+    padding: 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.dashboard-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.stat-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.stat-card h3 {
+    color: #555;
+    margin-bottom: 0.5rem;
+}
+
+.stat-value {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #667eea;
+}
+
+.dashboard-actions {
+    margin-bottom: 2rem;
+}
+
+.btn-primary {
+    background: #667eea;
+    padding: 0.75rem 1.5rem;
+    width: auto;
+}
+
+.btn-primary:hover {
+    background: #5a6fd8;
+}
+
+/* Business Summary */
+.business-summary {
+    background: white;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.summary-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    cursor: pointer;
+    background: #f8f9fa;
+    border-radius: 8px 8px 0 0;
+}
+
+.summary-header h3 {
+    color: #333;
+}
+
+.summary-stats {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.summary-stats span {
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    font-size: 0.9rem;
+}
+
+.income {
+    background: #e8f5e8;
+    color: #27ae60;
+}
+
+.expenses {
+    background: #feefef;
+    color: #e74c3c;
+}
+
+.profit.positive {
+    background: #e8f5e8;
+    color: #27ae60;
+}
+
+.profit.negative {
+    background: #feefef;
+    color: #e74c3c;
+}
+
+.toggle {
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.detailed-records {
+    padding: 1rem;
+}
+
+.records-section {
+    margin-bottom: 1.5rem;
+}
+
+.records-section h4 {
+    margin-bottom: 0.5rem;
+    color: #333;
+}
+
+.records-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 0.5rem;
+}
+
+.records-table th,
+.records-table td {
+    padding: 0.75rem;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.records-table th {
+    background: #f8f9fa;
+    font-weight: bold;
+}
+
+.expense-form-container {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    margin-bottom: 2rem;
+}
+
+.expense-form-container h3 {
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.expense-form {
+    display: grid;
+    gap: 1rem;
+}
+
+/* Loading */
+.loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-size: 1.2rem;
+    color: #667eea;
+}
+
+.message {
+    margin-top: 1rem;
+    padding: 0.75rem;
+    border-radius: 4px;
+    border: 1px solid;
+    text-align: center;
+}
+
+/* Snack Selection Styles */
+.available-snacks-section {
+    margin: 2rem 0;
+}
+
+.available-snacks-section h3 {
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.snacks-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin: 1rem 0;
+}
+
+.snack-item {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1rem;
+    text-align: center;
+    background: white;
+    transition: transform 0.2s;
+}
+
+.snack-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.snack-item h4 {
+    margin: 0 0 0.5rem 0;
+    color: #333;
+}
+
+.snack-item p {
+    margin: 0.25rem 0;
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.add-to-cart-btn {
+    background: #28a745;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 0.5rem;
+}
+
+.add-to-cart-btn:hover:not(:disabled) {
+    background: #218838;
+}
+
+.add-to-cart-btn:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+}
+
+.cart-section {
+    margin: 2rem 0;
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background: #f8f9fa;
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #eee;
+}
+
+.cart-item:last-child {
+    border-bottom: none;
+}
+
+.item-name {
+    flex: 2;
+    font-weight: bold;
+}
+
+.quantity-controls {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.quantity-btn {
+    background: #007bff;
+    color: white;
+    border: none;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.quantity {
+    min-width: 2rem;
+    text-align: center;
+    font-weight: bold;
+}
+
+.remove-btn {
+    background: #dc3545;
+    color: white;
+    border: none;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.8rem;
+}
+
+.cart-total {
+    text-align: right;
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 2px solid #ddd;
+}
+
+.no-snacks-message {
+    text-align: center;
+    padding: 2rem;
+    color: #666;
+    font-style: italic;
+}
+
+/* Payment Flow Styles */
+.payment-pending-section {
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.payment-pending-section h3 {
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.payment-details {
+    margin: 1rem 0;
+    padding: 1rem;
+    background: #f8f9fa;
+    border-radius: 8px;
+}
+
+.payment-details p {
+    margin: 0.5rem 0;
+    font-size: 1.1rem;
+}
+
+.loading-spinner {
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.spinner {
+    width: 40px;
+    height: 40px;
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid #667eea;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin: 0 auto 1rem;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.payment-success-section {
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    text-align: center;
+    border: 2px solid #28a745;
+}
+
+.payment-success-section h3 {
+    color: #28a745;
+    margin-bottom: 1rem;
+}
+
+.payment-success-section .payment-details {
+    margin: 1rem 0;
+    padding: 1rem;
+    background: #e8f5e8;
+    border-radius: 8px;
+}
+
+.payment-success-section .btn-primary {
+    background: #28a745;
+    margin-top: 1rem;
+}
+
+.payment-success-section .btn-primary:hover {
+    background: #218838;
+}
+
+.phone-number {
+    font-weight: bold;
+    color: #667eea;
+}
